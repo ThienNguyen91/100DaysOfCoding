@@ -1,0 +1,1 @@
+print("Number of letters in your name: " + str(len(input("What's your name ?"))))

@@ -1,0 +1,28 @@
+type: edu
+files:
+  - name: task.py
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+  - name: solution.py
+    visible: true
+    learner_created: false
+  - name: Logical Operators/task.py
+    visible: true
+    learner_created: false
+  - name: Logical Operators/solution.py
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 18 Aug 2024 14:44:21 UTC"
+record: -1

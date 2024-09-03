@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e8244de5-0bd5-412f-a824-abbfd79cf4e1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../pc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.author_contents_storage_db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.author_contents_storage_db-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.author_contents_storage_db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.author_contents_storage_db-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day 15/Coffee Machine Project/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Day 15/Coffee Machine Project/task-info.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ThienNguyen91"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:ThienNguyen91/100DaysOfCoding.git",
+    "accountId": "016d9a56-74e1-44cc-9c9d-0f767626d902"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2lSvYOUr6kMHr6zmbGUD7g7ua4y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature__branch",
+    "last_opened_file_path": "C:/Users/giath/PycharmProjects"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8244de5-0bd5-412f-a824-abbfd79cf4e1" name="Changes" comment="" />
+      <created>1725186338818</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725186338818</updated>
+    </task>
+    <servers />
+  </component>
+</project>

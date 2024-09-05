@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Day 1/task" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/pythonProject/.venv" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.12" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

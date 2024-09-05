@@ -6,8 +6,11 @@ screen = Screen()
 screen.colormode(255)
 Tommy = Turtle()
 direction = [0, 90, 180, 270]
-def change_color(Turtle, rgb):
-    Turtle.pencolor(rgb)
+def change_color(Turtle):
+    r = randint(1, 255)
+    g = randint(1, 255)
+    b = randint(1, 255)
+    Turtle.pencolor((r, g, b))
 def change_thickness(Turtle, size):
     Turtle.width(size)
 def random_direction(Turtle):

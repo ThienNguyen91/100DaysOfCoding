@@ -1,7 +1,6 @@
 from random import randint
-from turtle import Screen, Turtle
-
-
+from turtle import Screen, Turtle, colormode
+colormode(255)
 
 def change_color(Turtle):
     R = randint(0, 255)
@@ -9,15 +8,14 @@ def change_color(Turtle):
     G = randint(0, 255)
 
     Turtle.pencolor(R, G, B)
-angle = 0
+size_of_gap = int(input("How many gap?: "))
 Tom = Turtle()
 Tom.speed(0)
 print("Circle running")
-while angle != 360:
-    angle += 5
+for x in range(int(360/size_of_gap)):
     change_color(Tom)
     Tom.circle(100)
-    Tom.left(angle)
+    Tom.setheading(Tom.heading() +size_of_gap)
 
 
 
@@ -28,8 +26,7 @@ while angle != 360:
 
 
 
-
-screen.colormode(255)
+screen = Screen()
 screen.exitonclick()
 
 

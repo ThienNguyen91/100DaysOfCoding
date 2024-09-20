@@ -49,8 +49,8 @@ class Snake:
                 food.new_location()
             #Detect collision with wall
             if self.head.xcor() > 280 or self.head.xcor() < -280 or self.head.ycor() > 280 or self.head.ycor() < -280:
-                score.game_over()
-                break
+                score.reset()
+                self.reset()
             #Detect collision with tail
             game_over_flag = False
             for segment in square_block_list[1:]:
@@ -58,8 +58,8 @@ class Snake:
                     game_over_flag = True
                     break
             if game_over_flag:
-                score.game_over()
-                break
+                score.reset()
+                self.reset()
             #update frame
             screen.update()
             sleep(self.speed)
@@ -77,3 +77,9 @@ class Snake:
         square_block_list.append(square_block)
     def is_not_used(self):
         pass
+    def reset(self):
+        for segment in square_block_list:
+            segment.goto(1000,1000)
+        square_block_list.clear()
+        self.create_snake()
+        self.head = square_block_list[0]

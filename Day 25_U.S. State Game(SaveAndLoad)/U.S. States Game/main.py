@@ -34,7 +34,7 @@ def pen(row):
 def save(data_save):
     FIELD_NAME = ["state", "x", "y"]
     ROW = []
-    for each_row in data_save:
+    for each_row in data_save: b
         state = each_row.state.item()
         x = each_row.x.item()
         y = each_row.y. item()

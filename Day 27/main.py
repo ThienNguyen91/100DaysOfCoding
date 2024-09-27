@@ -12,10 +12,10 @@ def miles_to_km():
         return km
     except ValueError:
         return
+# entry
 miles_input = Entry(width=7)
 miles_input.grid(column=1, row=0)
 
-#entry
 miles_label = Label(text="Miles")
 miles_label.grid(column=2, row=0)
 

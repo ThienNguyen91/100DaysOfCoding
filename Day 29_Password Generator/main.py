@@ -1,8 +1,10 @@
+from re import search
 from tkinter import *
 from tkinter import PhotoImage
 from tkinter import messagebox
 import pyperclip
 import random
+import json
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -29,20 +31,44 @@ def password_generator():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def add():
-    website = website_input.get()
-    email = emailOrUsername_input.get()
-    password = Password_label_input.get()
+    website = website_input.get().title()
+    email = emailOrUsername_input.get().title()
+    password = Password_label_input.get().title()
+
+    data_format = {
+        website: {
+            "email": email,
+            "password": password
+        }
+    }
+
     if website and email and password:
-        ask_ok = messagebox.askokcancel(title="Amaazon", message=f"These are the details entered: \nEmail: {email}"
-                                                        f"\nPassword: {password} \n Is it ok to save?")
-        if ask_ok:
-            with open("data.txt", "a") as file:
-                file.write(f"{website} | {email} | {password}\n")
-                messagebox.showinfo(title= "Title", message="Message")
+        #Read json file
+        try:
+            with open("data.json", "r") as file:
+                data = json.load(file)
+                data.update(data_format)
+        except FileNotFoundError:
+            with open("data.json", "w") as file:
+                json.dump(data_format, file, indent=4)
+        else:
+            with open("data.json", "w") as file:
+                json.dump(data, file, indent= 4)
     else:
         messagebox.showinfo(title="Oops", message="Please make sure you haven't left any fields empty.")
     website_input.delete(0, END)
     Password_label_input.delete(0, END)
+
+def search_info():
+    website = website_input.get().title()
+    with open("data.json", "r") as reader:
+        data_reader = json.load(reader)
+        try:
+            info = data_reader[website]
+            messagebox.showinfo(title=website, message=f"Email: {info["email"]}\n"
+                                                       f"Password: {info["password"]}")
+        except KeyError:
+            messagebox.showinfo(title= "Error", message= "No Data File Found")
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -78,7 +104,7 @@ gen_password.grid(column=2, row= 3)
 add_but = Button(text="Add", width=36, command= add)
 add_but.grid(column= 1, row= 4, columnspan=2, )
 
-
-
+search_but = Button(text= "Search", command=search_info, width=13)
+search_but.grid(column=2, row= 1)
 
 window.mainloop()

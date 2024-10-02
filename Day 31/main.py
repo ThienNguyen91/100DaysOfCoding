@@ -1,11 +1,13 @@
 from tkinter import *
 from random import choice
 import pandas
-DATA_DIR = "data/japan_word.csv"
+DATA_DIR = "data/words_to_learn.csv"
+try:
+    data = pandas.read_csv(DATA_DIR)
+except FileNotFoundError:
+    data = pandas.read_csv("data/french_word.csv")
+data_dict = data.to_dict(orient= "records")
 
-with open(DATA_DIR, "r") as file:
-    data = pandas.read_csv(file)
-    data_dict = data.to_dict(orient= "records")
 current_card = {}
 BACKGROUND_COLOR = "#B1DDC6"
 window = Tk()
@@ -27,7 +29,12 @@ def flip_card():
     canvas.itemconfig(img, image=back_bg)
 
 flip_timer = window.after(3000, func= flip_card)
-
+def user_choose_right():
+    data_dict.remove(current_card)
+    new_save = pandas.DataFrame(data_dict)
+    new_save.to_csv("data/words_to_learn.csv", index= False)
+    print(len(data_dict))
+    change_word()
 
 canvas = Canvas(width=800,height=526)
 front_bg = PhotoImage(file="images/card_front.png")
@@ -46,7 +53,7 @@ wrong_button.grid(column= 0, row= 2)
 
 
 right_img = PhotoImage(file="images/right.png")
-right_button = Button(image= right_img, command=change_word)
+right_button = Button(image= right_img, command=user_choose_right)
 right_button.config(bg= BACKGROUND_COLOR, highlightthickness=0)
 right_button.grid(column= 1, row= 2)
 change_word()
